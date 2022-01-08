@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.rich-text",
+        "sections.large-media",
+        "sections.slider"
+      ]
+    },
+    "coverImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "public": {
+      "type": "boolean",
+      "default": true,
+      "unique": false,
+      "required": true,
+      "private": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "private": false,
+      "unique": true
+    },
+    "hero": {
+      "type": "string",
+      "required": true,
+      "default": "Esta es una descripción para la imagen"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
