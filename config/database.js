@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'develop',
+  defaultConnection: env('NODE_ENV') === 'production' ? 'default' : 'develop',
   connections: {
     default: {
       connector: 'bookshelf',
