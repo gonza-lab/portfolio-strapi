@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_large_medias",
+  "info": {
+    "displayName": "LargeMedia",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
